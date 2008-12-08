@@ -1,0 +1,3 @@
+/Users/hortont/Desktop/Scheduler/ScheduleView.m|59|warning: passing argument 1 of ‘CTFontCreateWithName’ from incompatible pointer type
+/Users/hortont/Desktop/Scheduler/ScheduleView.m|66|warning: passing argument 2 of ‘CFAttributedStringCreate’ from incompatible pointer type
+/Users/hortont/Desktop/Scheduler/ScheduleView.m|140|warning: initialization from distinct Objective-C type
