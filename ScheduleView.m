@@ -10,9 +10,13 @@
 
 @implementation ScheduleView
 
+int ci = 0;
+NSArray * roomNames;
+
 - (id)initWithFrame:(NSRect)frame
 {
     self = [super initWithFrame:frame];
+	
 
     return self;
 }
@@ -22,16 +26,52 @@
 	classes = [NSMutableArray new];
 	colors = [NSMutableArray new];
 	classNames = [NSMutableDictionary new];
-	
+
+	// Carol:
+	roomNames = [[NSArray arrayWithObjects:@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10",@"11",@"12",@"13",@"14",@"15",@"16",@"17",@"18",@"19",@"20",@"21",@"22",NULL] retain];
+	// Tim:
+	//roomNames = [[NSArray arrayWithObjects:@"DCC 318",@"DCC 318",@"DCC 330",@"CARNEGIE 208",@"CARNEGIE 208",@"DCC 318",@"DCC 318",@"WEST 211",NULL] retain];
+	// Matt:
+	//roomNames = [[NSArray arrayWithObjects:@"SAGE 5510",@"SAGE 5510",@"CARNEGIE 112",@"CARNEGIE 112",@"LALLY 102",@"LALLY 102",@"DCC 318",@"DCC 318",@"EATON 216",@"CARNEGIE 201",@"CARNEGIE 201",@"LOW 4050",@"13",@"14",@"15",@"DCC 308",@"DCC 308",@"JEC 4104",@"SAGE 3510",@"SAGE 5101",@"SAGE 5101",@"DCC 324",@"DCC 324",@"DCC 324",@"SAGE 2704",@"SAGE 2704",@"DCC 330",@"DCC 330",@"SAGE 3303",@"CARNEGIE 101",NULL] retain];
+	// Tristan:
+	//roomNames = [[NSArray arrayWithObjects:@"DCC 308",@"DCC 308",@"LALLY 104",@"LALLY 104",@"EATON 216",@"EATON 216",@"EATON 216",@"WALKER 3109",@"WALKER 3109",@"CARNEGIE 112",@"CARNEGIE 112",@"DCC 330",@"DCC 330",@"RICKETTS 211",@"RICKETTS 211",@"16",@"17",@"18",@"19",@"20",@"21",@"22",NULL] retain];
+	// Template:
+	// roomNames = [[NSArray arrayWithObjects:@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10",@"11",@"12",@"13",@"14",@"15",@"16",@"17",@"18",@"19",@"20",@"21",@"22",NULL] retain];
+
 	[crns loadCRNFile];
+	ci = 0;
 	
 	// TODO: Check if null BEFORE we add
 
-	[classes addObject:[crns getSectionForCRN:31645]];
-	//[classes addObject:[crns getSectionForCRN:33617]];
-	[classes addObject:[crns getSectionForCRN:31930]];
-	[classes addObject:[crns getSectionForCRN:31756]];
-	[classes addObject:[crns getSectionForCRN:32020]];
+	// Carol:
+	[classes addObject:[crns getSectionForCRN:42575]];
+	[classes addObject:[crns getSectionForCRN:43013]];
+	[classes addObject:[crns getSectionForCRN:42708]];
+	[classes addObject:[crns getSectionForCRN:43400]];
+	[classes addObject:[crns getSectionForCRN:42923]];
+	
+	// Tristan:
+	/*[classes addObject:[crns getSectionForCRN:42575]];
+	[classes addObject:[crns getSectionForCRN:43013]];
+	[classes addObject:[crns getSectionForCRN:42708]];
+	[classes addObject:[crns getSectionForCRN:43400]];
+	[classes addObject:[crns getSectionForCRN:42923]];*/
+	
+	// Tim:
+	/*[classes addObject:[crns getSectionForCRN:44481]];
+	[classes addObject:[crns getSectionForCRN:42602]];
+	[classes addObject:[crns getSectionForCRN:45303]];
+	[classes addObject:[crns getSectionForCRN:43408]];
+	[classes addObject:[crns getSectionForCRN:43122]];*/
+	
+	// Matt:
+	/*[classes addObject:[crns getSectionForCRN:43117]];
+	[classes addObject:[crns getSectionForCRN:42695]];
+	[classes addObject:[crns getSectionForCRN:42600]];
+	[classes addObject:[crns getSectionForCRN:42580]];
+	[classes addObject:[crns getSectionForCRN:45174]];
+	[classes addObject:[crns getSectionForCRN:42585]];*/
+	
 	
 	[colors addObject:[NSColor colorWithDeviceRed:(250.0/255) green:(245.0/255) blue:(156.0/255) alpha:1.0]];
 	[colors addObject:[NSColor colorWithDeviceRed:(120.0/255) green:(185.0/255) blue:(255.0/255) alpha:1.0]];
@@ -42,11 +82,32 @@
 	[colors addObject:[NSColor colorWithDeviceRed:(184.0/255) green:(115.0/255) blue:(065.0/255) alpha:1.0]];
 	[colors addObject:[NSColor colorWithDeviceRed:(140.0/255) green:(140.0/255) blue:(140.0/255) alpha:1.0]];
 	
+	[classNames setObject:@"Intro to Electronics" forKey:@"INTRODUCTION TO ELECTRONI"];
 	[classNames setObject:@"Discrete Structures" forKey:@"INTRO DISCRETE STRUCTURES"];
 	[classNames setObject:@"Operating Systems" forKey:@"OPERATING SYSTEMS"];
 	[classNames setObject:@"Fundamentals of Optics" forKey:@"FUNDAMENTALS OF OPTICS"];
 	[classNames setObject:@"Multivariable Calculus" forKey:@"MULTIVAR CALC & MATRIX AL"];
+	[classNames setObject:@"Signals & Systems" forKey:@"SIGNALS & SYSTEMS"];
+	[classNames setObject:@"Drugs" forKey:@"DRUGS SOCIETY & BEHAVIOR"];
+	[classNames setObject:@"PD II" forKey:@"PROFESSIONAL DEVELOPMENT"];
+	[classNames setObject:@"Intermediate Mechanics" forKey:@"INTERMEDIATE MECHANICS"];
+	[classNames setObject:@"Advanced Calculus" forKey:@"ADVANCED CALCULUS"];
+	[classNames setObject:@"Quantum Physics" forKey:@"QUANTUM PHYSICS"];
+	[classNames setObject:@"Intro to Algorithms" forKey:@"INTRODUCTION TO ALGORITHM"];
+	[classNames setObject:@"Religious Belief & Disbelief" forKey:@"RELIGIOUS BELIEF & DISBEL"];
+	[classNames setObject:@"Intermediate Video" forKey:@"INTERMEDIATE VIDEO"];
+	[classNames setObject:@"Programming Languages" forKey:@"PROGRAMMING LANGUAGES"];
+	[classNames setObject:@"Machine Learning" forKey:@"MACHINE LEARNING"];
+	[classNames setObject:@"Intro to AI" forKey:@"INTRO TO ARTIFICIAL INTE"];
+	[classNames setObject:@"Quasars & Cosmology" forKey:@"QUASARS & COSMOLOGY"];
+	[classNames setObject:@"A Passion for Physics" forKey:@"A PASSION FOR PHYSICS"];
+	[classNames setObject:@"Computer Science I" forKey:@"COMPUTER SCIENCE I"];
+	[classNames setObject:@"Modern Chemistry" forKey:@"MODERN TECHNIQUES IN CHEM"];
+	[classNames setObject:@"Macroscopic Physical Chemistry" forKey:@"MACROSCOPIC PHYSICAL CHEM"];
+	[classNames setObject:@"Transport Phenomena I" forKey:@"TRANSPORT PHENOMENA I"];
+	[classNames setObject:@"ODEs and Dynamics" forKey:@"ORDINARY DIFFEQ AND DYNAM"];
 	
+	ci = 0;
 	NSBitmapImageRep * bmap = [self bitmapImageRepForCachingDisplayInRect:[self visibleRect]];
 	[self cacheDisplayInRect:[self visibleRect] toBitmapImageRep:bmap];
 	[[bmap representationUsingType:NSPNGFileType properties:nil] writeToFile:@"/Users/hortont/Desktop/schedule.png" atomically:TRUE];
@@ -65,6 +126,8 @@
 						  sizeof(keys) / sizeof(keys[0]), &kCFTypeDictionaryKeyCallBacks, &kCFTypeDictionaryValueCallBacks);
 	CFAttributedStringRef attrString = CFAttributedStringCreate(NULL, str, attr);
 	CFRelease(attr);
+	
+	NSLog(@"%@", str);
 	
 	CTLineRef line = CTLineCreateWithAttributedString(attrString);
 	CGContextSetTextMatrix(ctx, CGAffineTransformIdentity);
@@ -151,11 +214,12 @@
 	NSString * prof = [[period attributeForName:@"professor"] objectValue];
 	NSString * classType = [[period attributeForName:@"type"] objectValue];
 	
-	prof = @"LOW-2112";
+	prof = [roomNames objectAtIndex:ci++];
+	NSLog(@"%i", ci);
 	
-	[self drawText:name withFont:@"Adobe Garamond Pro Bold" atSize:16 inRect:rect fromCenterX:0 Y:15 align:FALSE opacity:1.0];
-	[self drawText:prof withFont:@"Adobe Garamond Pro" atSize:14 inRect:rect fromCenterX:0 Y:-10 align:FALSE opacity:1.0];
-	[self drawText:classid withFont:@"Adobe Garamond Pro" atSize:12 inRect:rect fromCenterX:3 Y:5 align:TRUE opacity:1.0];
+	[self drawText:name withFont:@"Gill Sans" atSize:14 inRect:rect fromCenterX:0 Y:12 align:FALSE opacity:1.0];
+	[self drawText:prof withFont:@"Gill Sans Light" atSize:12 inRect:rect fromCenterX:0 Y:-7 align:FALSE opacity:1.0];
+	[self drawText:classid withFont:@"Gill Sans" atSize:9 inRect:rect fromCenterX:3 Y:5 align:TRUE opacity:1.0];
 	
 	if([classType isEqualToString:@"recitation"])
 		[self drawText:@"REC" withFont:@"Gill Sans Bold" atSize:11 inRect:rect fromCenterX:3 Y:(rect.size.height - 11) align:TRUE opacity:0.4];
@@ -185,6 +249,7 @@ float convertTime(NSString * timeStr)
 {
     [[NSColor whiteColor] setFill];
     NSRectFill(rect);
+	ci = 0;
 	
 	int hoursWidth = 60;
 
@@ -214,7 +279,7 @@ float convertTime(NSString * timeStr)
 		}
 	}
 	
-	float dayLength = latestEnd - earliestStart + 0.5;
+	float dayLength = latestEnd - earliestStart + 1.0;
 	float dayStart = earliestStart;
 	
 	float hourHeight = rect.size.height / dayLength;
@@ -230,10 +295,10 @@ float convertTime(NSString * timeStr)
 		
 		CGContextMoveToPoint(ctx, 0, loc);
 		CGContextAddLineToPoint(ctx, rect.size.width, loc);
-		CGContextSetRGBStrokeColor(ctx, 0, 0, 0, 0.2);
+		CGContextSetRGBStrokeColor(ctx, 0, 0, 0, 0.3);
 		CGContextStrokePath(ctx);
 		
-		[[NSString stringWithFormat:@"%d",chour] drawAtPoint:NSMakePoint(5,loc - 26) withAttributes:attr];
+		[[NSString stringWithFormat:@"%d",chour > 12 ? chour - 12 : chour] drawAtPoint:NSMakePoint(5,loc - 26) withAttributes:attr];
 	}
 	
 	int currentColor = 0;
@@ -274,9 +339,9 @@ float convertTime(NSString * timeStr)
 	}
 	
 	attr = [[NSDictionary alloc] initWithObjectsAndKeys:
-                        [NSFont fontWithName:@"Adobe Garamond Pro Bold" size:32], NSFontAttributeName, nil];
-	NSRect br = [@"Matt" boundingRectWithSize:bigRect.size options:0 attributes:attr];
-	[@"Matt" drawAtPoint:NSMakePoint((bigRect.size.width/2)-(br.size.width/2),bigRect.size.height - 40) withAttributes:attr];
+                        [NSFont fontWithName:@"Gill Sans Light" size:32], NSFontAttributeName, nil];
+	NSRect br = [@"Tim" boundingRectWithSize:bigRect.size options:0 attributes:attr];
+	[@"Tim" drawAtPoint:NSMakePoint((bigRect.size.width/2)-(br.size.width/2),bigRect.size.height - 40) withAttributes:attr];
 }
 
 @end
