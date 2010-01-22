@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>ActivePerspectiveName</key>
-	<string>Project</string>
+	<string>Debug</string>
 	<key>AllowedModules</key>
 	<array>
 		<dict>
@@ -238,9 +238,10 @@
 				<string>active-combo-popup</string>
 				<string>action</string>
 				<string>NSToolbarFlexibleSpaceItem</string>
-				<string>toggle-editor</string>
+				<string>buildOrClean</string>
 				<string>build-and-go</string>
 				<string>clean</string>
+				<string>toggle-editor</string>
 				<string>com.apple.ide.PBXToolbarStopButton</string>
 				<string>get-info</string>
 				<string>NSToolbarFlexibleSpaceItem</string>
@@ -322,8 +323,6 @@
 							<string>MainColumn</string>
 							<real>184</real>
 						</array>
-						<key>RubberWindowFrame</key>
-						<string>1 55 1380 823 0 0 1440 878 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -334,8 +333,6 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -353,11 +350,11 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>35367C37105078890045B2D9</string>
+										<string>353C92D3110942E500E1A22A</string>
 										<key>history</key>
 										<array>
 											<string>35367BC0105072450045B2D9</string>
-											<string>35367C35105076A70045B2D9</string>
+											<string>353C92C71109423B00E1A22A</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -372,8 +369,6 @@
 							<dict>
 								<key>Frame</key>
 								<string>{{0, 0}, {1174, 777}}</string>
-								<key>RubberWindowFrame</key>
-								<string>1 55 1380 823 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -397,8 +392,6 @@
 									<dict>
 										<key>Frame</key>
 										<string>{{10, 27}, {1174, -27}}</string>
-										<key>RubberWindowFrame</key>
-										<string>1 55 1380 823 0 0 1440 878 </string>
 									</dict>
 									<key>Module</key>
 									<string>XCDetailModule</string>
@@ -480,11 +473,11 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>35367BE6105072DE0045B2D9</string>
+				<string>353C929C1109410A00E1A22A</string>
 				<string>1CA23ED40692098700951B8B</string>
-				<string>35367BE7105072DE0045B2D9</string>
+				<string>353C929D1109410A00E1A22A</string>
 				<string>355D698E0ED31EBB0045861A</string>
-				<string>35367BE8105072DE0045B2D9</string>
+				<string>353C929E1109410A00E1A22A</string>
 				<string>1CA23EDF0692099D00951B8B</string>
 				<string>1CA23EE00692099D00951B8B</string>
 				<string>1CA23EE10692099D00951B8B</string>
@@ -525,6 +518,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXProjectModuleGUID</key>
@@ -536,6 +531,8 @@
 					<dict>
 						<key>Frame</key>
 						<string>{{0, 0}, {1380, 309}}</string>
+						<key>RubberWindowFrame</key>
+						<string>1 55 1380 823 0 0 1440 878 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXDebugCLIModule</string>
@@ -610,7 +607,11 @@
 							</array>
 							<key>Frame</key>
 							<string>{{673, 0}, {707, 229}}</string>
+							<key>RubberWindowFrame</key>
+							<string>1 55 1380 823 0 0 1440 878 </string>
 						</dict>
+						<key>RubberWindowFrame</key>
+						<string>1 55 1380 823 0 0 1440 878 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXDebugSessionModule</string>
@@ -633,13 +634,13 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>35367BE9105072DE0045B2D9</string>
+				<string>353C92A41109415B00E1A22A</string>
 				<string>1CCC7628064C1048000F2A68</string>
 				<string>1CCC7629064C1048000F2A68</string>
-				<string>35367BEA105072DE0045B2D9</string>
-				<string>35367BEB105072DE0045B2D9</string>
-				<string>35367BEC105072DE0045B2D9</string>
-				<string>35367BED105072DE0045B2D9</string>
+				<string>353C92A51109415B00E1A22A</string>
+				<string>353C92A61109415B00E1A22A</string>
+				<string>353C92A71109415B00E1A22A</string>
+				<string>353C92A81109415B00E1A22A</string>
 				<string>355D698E0ED31EBB0045861A</string>
 			</array>
 			<key>ToolbarConfigUserDefaultsMinorVersion</key>
@@ -657,7 +658,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>273709193.68045902</real>
+	<real>285819621.27135599</real>
 	<key>ToolbarDisplayMode</key>
 	<integer>2</integer>
 	<key>ToolbarIsVisible</key>
@@ -672,8 +673,8 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>35367BEF105072DE0045B2D9</string>
-		<string>35367BF0105072DE0045B2D9</string>
+		<string>353C92AA1109415B00E1A22A</string>
+		<string>353C92AB1109415B00E1A22A</string>
 		<string>/Users/hortont/Code/Cocoa-Scheduler/Scheduler.xcodeproj</string>
 	</array>
 	<key>WindowString</key>

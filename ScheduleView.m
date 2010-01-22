@@ -28,9 +28,9 @@ NSArray * roomNames;
 	classNames = [NSMutableDictionary new];
 
 	// Carol:
-	roomNames = [[NSArray arrayWithObjects:@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10",@"11",@"12",@"13",@"14",@"15",@"16",@"17",@"18",@"19",@"20",@"21",@"22",NULL] retain];
+	//roomNames = [[NSArray arrayWithObjects:@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10",@"11",@"12",@"13",@"14",@"15",@"16",@"17",@"18",@"19",@"20",@"21",@"22",NULL] retain];
 	// Tim:
-	//roomNames = [[NSArray arrayWithObjects:@"DCC 318",@"DCC 318",@"DCC 330",@"CARNEGIE 208",@"CARNEGIE 208",@"DCC 318",@"DCC 318",@"WEST 211",NULL] retain];
+	roomNames = [[NSArray arrayWithObjects:@"DCC 308",@"DCC 308",@"DCC 308",@"WALKER 6113",@"SAGE 2411",@"SAGE 2411",@"EATON 215",@"EATON 215",@"GREENE 120",@"GREENE 120",@"SAGE 3101",@"SAGE 3101",@"13",@"14",@"15",@"16",@"17",@"18",@"19",@"20",@"21",@"22",NULL] retain];
 	// Matt:
 	//roomNames = [[NSArray arrayWithObjects:@"SAGE 5510",@"SAGE 5510",@"CARNEGIE 112",@"CARNEGIE 112",@"LALLY 102",@"LALLY 102",@"DCC 318",@"DCC 318",@"EATON 216",@"CARNEGIE 201",@"CARNEGIE 201",@"LOW 4050",@"13",@"14",@"15",@"DCC 308",@"DCC 308",@"JEC 4104",@"SAGE 3510",@"SAGE 5101",@"SAGE 5101",@"DCC 324",@"DCC 324",@"DCC 324",@"SAGE 2704",@"SAGE 2704",@"DCC 330",@"DCC 330",@"SAGE 3303",@"CARNEGIE 101",NULL] retain];
 	// Tristan:
@@ -44,11 +44,11 @@ NSArray * roomNames;
 	// TODO: Check if null BEFORE we add
 
 	// Carol:
-	[classes addObject:[crns getSectionForCRN:42575]];
+	/*[classes addObject:[crns getSectionForCRN:42575]];
 	[classes addObject:[crns getSectionForCRN:43013]];
 	[classes addObject:[crns getSectionForCRN:42708]];
 	[classes addObject:[crns getSectionForCRN:43400]];
-	[classes addObject:[crns getSectionForCRN:42923]];
+	[classes addObject:[crns getSectionForCRN:42923]];*/
 	
 	// Tristan:
 	/*[classes addObject:[crns getSectionForCRN:42575]];
@@ -58,11 +58,11 @@ NSArray * roomNames;
 	[classes addObject:[crns getSectionForCRN:42923]];*/
 	
 	// Tim:
-	/*[classes addObject:[crns getSectionForCRN:44481]];
-	[classes addObject:[crns getSectionForCRN:42602]];
-	[classes addObject:[crns getSectionForCRN:45303]];
-	[classes addObject:[crns getSectionForCRN:43408]];
-	[classes addObject:[crns getSectionForCRN:43122]];*/
+	[classes addObject:[crns getSectionForCRN:50896]];
+	[classes addObject:[crns getSectionForCRN:50629]];
+	[classes addObject:[crns getSectionForCRN:52486]];
+	[classes addObject:[crns getSectionForCRN:51738]];
+	[classes addObject:[crns getSectionForCRN:52601]];
 	
 	// Matt:
 	/*[classes addObject:[crns getSectionForCRN:43117]];
@@ -106,6 +106,11 @@ NSArray * roomNames;
 	[classNames setObject:@"Macroscopic Physical Chemistry" forKey:@"MACROSCOPIC PHYSICAL CHEM"];
 	[classNames setObject:@"Transport Phenomena I" forKey:@"TRANSPORT PHENOMENA I"];
 	[classNames setObject:@"ODEs and Dynamics" forKey:@"ORDINARY DIFFEQ AND DYNAM"];
+	[classNames setObject:@"Intro to Biology" forKey:@"INTRODUCTION TO BIOLOGY"];
+	[classNames setObject:@"Typography" forKey:@"TYPOGRAPHY"];
+	[classNames setObject:@"Parallel Programming" forKey:@"PARALLEL PROGRAMMING"];
+	[classNames setObject:@"Intro to Economics" forKey:@"INTRODUCTORY ECONOMICS"];
+	[classNames setObject:@"Advanced Computer Graphics" forKey:@"ADVANCED COMPUTER GRAPHIC"];
 	
 	ci = 0;
 	NSBitmapImageRep * bmap = [self bitmapImageRepForCachingDisplayInRect:[self visibleRect]];
